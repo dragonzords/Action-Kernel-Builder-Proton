@@ -3,23 +3,23 @@ name: Build Kernel
 on:
   workflow_dispatch:
     inputs:
-      PROTON_RELEASE:
+      PROTON_RELEASE: 'master'
         description: 'Release tag'
         required: true
         default: 'master'
-      KERNEL_TREE:
+      KERNEL_TREE: 'https://github.com/dragonzords/Interstellar_begonia_kernel.git'
         description: 'Kernel tree URL'
         required: true
         default: 'https://github.com/carlodandan/android_kernel_realme_sm6225'
-      KERNEL_BRANCH:
+      KERNEL_BRANCH: 'vic'
         description: 'Kernel tree Branch'
         required: true
         default: 'lineage-21'
-      KERNEL_DEFCONFIG:
+      KERNEL_DEFCONFIG: 'begonia_user_defconfig'
         description: 'Kernel defconfig'
         required: true
         default: 'vendor/sm6225-perf_defconfig'
-      KERNEL_IMAGE_NAME:
+      KERNEL_IMAGE_NAME: 'Image.gz-dtb'
         description: 'Kernel image name'
         required: true
         default: 'Image.gz'
